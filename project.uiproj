@@ -1,0 +1,6 @@
+{
+  "Name": "pets lover Process",
+  "ProjectType": "Process",
+  "Description": "Pet Lover Process",
+  "MainFile": "Main.xaml"
+}

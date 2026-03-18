@@ -1,0 +1,21 @@
+
+################################################################################
+# Added by UiPath Studio
+# Prevent caching and local artifacts from being committed
+################################################################################
+.local
+.metadata
+.type
+design.json
+globalVariables.json
+.screenshots
+.settings
+
+
+################################################################################
+# End of UiPath Studio common ignores
+################################################################################
+.project/PackageBindingsMetadata.json
+.screenshots/73f0fca9254f049b921d3b55bfa4fe0f.png
+.screenshots/1d4c0bfaf138d110fa614e852cdf2280.png
+.screenshots/261374737a897d308a881fc66fd00021.png
