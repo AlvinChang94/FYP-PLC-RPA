@@ -123,7 +123,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="BankTransactionDelaysV2" sap:VirtualizedContainerService.HintSize="917,502.65666666666664" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="BankTransactionDelaysV2" sap:VirtualizedContainerService.HintSize="600,570.3233333333333" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="CCDatePopulated" />
       <Variable x:TypeArguments="x:String" Name="NETSDatePopulated" />
@@ -878,38 +878,38 @@
                                       <av:Size x:Key="ShapeSize">110,70</av:Size>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Paste Tables into Reconciliation file" sap:VirtualizedContainerService.HintSize="586,1612" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                  <Sequence DisplayName="Paste Tables into Reconciliation file" sap:VirtualizedContainerService.HintSize="640,2405.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="552,1124.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="606,1922" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
                                       <ueab:ExcelProcessScopeX.Body>
                                         <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1005.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572,1802.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="484,739.3333333333334" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;Reconciliation Folder Path&quot;) + &quot;\&quot; + in_ReconciliationFileName]">
+                                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="538,1544.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;Reconciliation Folder Path&quot;) + &quot;\&quot; + in_ReconciliationFileName]">
                                               <ueab:ExcelApplicationCard.Body>
                                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                                                   </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,422.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,1232" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <If sap2010:Annotation.AnnotationText="This checks if date is not populated for DBS VISA MASTER then it will paste the data and highlight the duplicate delayed date rows." Condition="[CCDatePopulated &lt;&gt; &quot;Yes&quot;]" DisplayName="Copy and Highlight DBS VISA MASTER sheet" sap:VirtualizedContainerService.HintSize="416,122.66666666666667" sap2010:WorkflowViewState.IdRef="If_10">
+                                                    <If sap2010:Annotation.AnnotationText="This checks if date is not populated for DBS VISA MASTER then it will paste the data and highlight the duplicate delayed date rows." Condition="[CCDatePopulated &lt;&gt; &quot;Yes&quot;]" DisplayName="Copy and Highlight DBS VISA MASTER sheet" sap:VirtualizedContainerService.HintSize="470,118.66666666666667" sap2010:WorkflowViewState.IdRef="If_10">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -952,7 +952,7 @@
                                                         </Sequence>
                                                       </If.Else>
                                                     </If>
-                                                    <If sap2010:Annotation.AnnotationText="This checks if date is not populated for NETS then it will paste the data and highlight the duplicate delayed date rows." Condition="[NETSDatePopulated &lt;&gt; &quot;Yes&quot;]" DisplayName="Copy and Highlight NETS sheet" sap:VirtualizedContainerService.HintSize="416,122.66666666666667" sap2010:WorkflowViewState.IdRef="If_11">
+                                                    <If sap2010:Annotation.AnnotationText="This checks if date is not populated for NETS then it will paste the data and highlight the duplicate delayed date rows." Condition="[NETSDatePopulated &lt;&gt; &quot;Yes&quot;]" DisplayName="Copy and Highlight NETS sheet" sap:VirtualizedContainerService.HintSize="470,118.66666666666667" sap2010:WorkflowViewState.IdRef="If_11">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -995,24 +995,24 @@
                                                         </Sequence>
                                                       </If.Else>
                                                     </If>
-                                                    <If sap2010:Annotation.AnnotationText="This checks if date is not populated for UOB AMEX then it will paste the data and highlight the duplicate delayed date rows." Condition="[AMEXDatePopulated &lt;&gt; &quot;Yes&quot;]" DisplayName="Copy and Highlight AMEX sheet" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="If_12">
+                                                    <If sap2010:Annotation.AnnotationText="This checks if date is not populated for UOB AMEX then it will paste the data and highlight the duplicate delayed date rows." Condition="[AMEXDatePopulated &lt;&gt; &quot;Yes&quot;]" DisplayName="Copy and Highlight AMEX sheet" sap:VirtualizedContainerService.HintSize="470,934.6666666666666" sap2010:WorkflowViewState.IdRef="If_12">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
                                                       <If.Then>
-                                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,725" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,734" sap2010:WorkflowViewState.IdRef="Sequence_103">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;UOB AMEX&quot;).Range(&quot;G4&quot;)]" DisplayName="Write AMEX into UOB AMEX Table" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="False" Source="[dt_AMEXTableToPaste]" />
-                                                          <ueab:WriteCellX Cell="[Excel.Sheet(&quot;UOB AMEX&quot;).Cell(&quot;Q2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[&quot;Yes&quot;]" />
-                                                          <ueab:ExecuteMacroX Result="{x:Null}" DisplayName="Run Spreadsheet Macro" sap:VirtualizedContainerService.HintSize="434,279" sap2010:WorkflowViewState.IdRef="ExecuteMacroX_3" MacroName="ApplyConditionalFormatting_AMEX" Workbook="[Excel]">
+                                                          <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;UOB AMEX&quot;).Range(&quot;G4&quot;)]" DisplayName="Write AMEX into UOB AMEX Table" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,196.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="False" Source="[dt_AMEXTableToPaste]" />
+                                                          <ueab:WriteCellX Cell="[Excel.Sheet(&quot;UOB AMEX&quot;).Cell(&quot;Q2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,196.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[&quot;Yes&quot;]" />
+                                                          <ueab:ExecuteMacroX Result="{x:Null}" DisplayName="Run Spreadsheet Macro" sap:VirtualizedContainerService.HintSize="434,280.6666666666667" sap2010:WorkflowViewState.IdRef="ExecuteMacroX_3" MacroName="RemoveDuplicates_AMEX()" Workbook="[Excel]">
                                                             <ueab:ExecuteMacroX.Body>
                                                               <ActivityAction>
                                                                 <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_105">
@@ -1042,7 +1042,7 @@
                                                 </ActivityAction>
                                               </ueab:ExcelApplicationCard.Body>
                                             </ueab:ExcelApplicationCard>
-                                            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" ProcessName="{x:Null}" sap2010:Annotation.AnnotationText="Kill excel process incase it stays open after usage" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="484,202" sap2010:WorkflowViewState.IdRef="KillProcess_1" Process="[If(ExcelProcessScopeTag.ProcessId.HasValue, Process.GetProcessById(ExcelProcessScopeTag.ProcessId.Value), Nothing)]">
+                                            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" ProcessName="{x:Null}" sap2010:Annotation.AnnotationText="Kill excel process incase it stays open after usage" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="538,198" sap2010:WorkflowViewState.IdRef="KillProcess_1" Process="[If(ExcelProcessScopeTag.ProcessId.HasValue, Process.GetProcessById(ExcelProcessScopeTag.ProcessId.Value), Nothing)]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1053,9 +1053,9 @@
                                         </ActivityAction>
                                       </ueab:ExcelProcessScopeX.Body>
                                     </ueab:ExcelProcessScopeX>
-                                    <If Condition="[ManualsPopulated &lt;&gt; &quot;Yes&quot;]" DisplayName="Populate dates for Manual Sheets if needed" sap:VirtualizedContainerService.HintSize="552,260" sap2010:WorkflowViewState.IdRef="If_15">
+                                    <If Condition="[ManualsPopulated &lt;&gt; &quot;Yes&quot;]" DisplayName="Populate dates for Manual Sheets if needed" sap:VirtualizedContainerService.HintSize="606,256" sap2010:WorkflowViewState.IdRef="If_15">
                                       <If.Then>
-                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,94.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_137">
+                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_137">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1074,7 +1074,7 @@
                                         </Sequence>
                                       </If.Else>
                                     </If>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="552,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;End of populating Reconciliation file table -- &quot; + Now.ToString]" />
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;End of populating Reconciliation file table -- &quot; + Now.ToString]" />
                                   </Sequence>
                                 </FlowStep>
                               </FlowDecision.True>
