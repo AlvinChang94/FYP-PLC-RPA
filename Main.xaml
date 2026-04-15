@@ -133,7 +133,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="780,683" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="805,682.9999999999999" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="GetFileDate" />
       <Variable x:TypeArguments="x:Boolean" Name="IsFutureDate" />
@@ -194,7 +194,7 @@
             <av:PointCollection x:Key="ConnectorLocation">345,160 385,160</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence sap2010:Annotation.AnnotationText="Read config excel file, then generate config dictionary" DisplayName="Config File Sequence" sap:VirtualizedContainerService.HintSize="512.5,1381" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap2010:Annotation.AnnotationText="Read config excel file, then generate config dictionary" DisplayName="Config File Sequence" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2462,14 +2462,14 @@
                                                                                     <av:Point x:Key="AnnotationLocation">50,888</av:Point>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                <Sequence DisplayName="Invoke Copy Transactions" sap:VirtualizedContainerService.HintSize="518,1989.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                                                                                <Sequence DisplayName="Invoke Copy Transactions" sap:VirtualizedContainerService.HintSize="518,2200" sap2010:WorkflowViewState.IdRef="Sequence_109">
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <ui:Comment sap:VirtualizedContainerService.HintSize="484,128" sap2010:WorkflowViewState.IdRef="Comment_11" Text="Invoke Copy Transaction for all sheets in Reconciliation File and move it to output folder" />
-                                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CopyTransactionsCC - Invoke Workflow File (CopyTransactionsCC.xaml)" sap:VirtualizedContainerService.HintSize="484,182.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="CopyTransactionsCC.xaml">
+                                                                                  <ui:Comment sap:VirtualizedContainerService.HintSize="484,127.5" sap2010:WorkflowViewState.IdRef="Comment_11" Text="Invoke Copy Transaction for all sheets in Reconciliation File and move it to output folder" />
+                                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CopyTransactionsCC - Invoke Workflow File (CopyTransactionsCC.xaml)" sap:VirtualizedContainerService.HintSize="484,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="CopyTransactionsCC.xaml">
                                                                                     <ui:InvokeWorkflowFile.Arguments>
                                                                                       <InArgument x:TypeArguments="x:String" x:Key="in_ReconciliationFileName">[ReconciliationFileName]</InArgument>
                                                                                       <InArgument x:TypeArguments="sd:DataTable" x:Key="in_OutletNames">[OutletNames]</InArgument>
@@ -2478,7 +2478,7 @@
                                                                                       <InArgument x:TypeArguments="s:DateTime" x:Key="in_GetFileDate">[GetFileDate]</InArgument>
                                                                                     </ui:InvokeWorkflowFile.Arguments>
                                                                                   </ui:InvokeWorkflowFile>
-                                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CopyTransactionsNETS - Invoke Workflow File (CopyTransactionsNETS.xaml)" sap:VirtualizedContainerService.HintSize="484,182.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="CopyTransactionsNETS.xaml">
+                                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CopyTransactionsNETS - Invoke Workflow File (CopyTransactionsNETS.xaml)" sap:VirtualizedContainerService.HintSize="484,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="CopyTransactionsNETS.xaml">
                                                                                     <ui:InvokeWorkflowFile.Arguments>
                                                                                       <InArgument x:TypeArguments="x:String" x:Key="in_ReconciliationFileName">[ReconciliationFileName]</InArgument>
                                                                                       <InArgument x:TypeArguments="sd:DataTable" x:Key="in_OutletNames">[OutletNames]</InArgument>
@@ -2487,7 +2487,7 @@
                                                                                       <InArgument x:TypeArguments="s:DateTime" x:Key="in_GetFileDate">[GetFileDate]</InArgument>
                                                                                     </ui:InvokeWorkflowFile.Arguments>
                                                                                   </ui:InvokeWorkflowFile>
-                                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CopyTransactionsAMEX - Invoke Workflow File (CopyTransactionsAMEX.xaml)" sap:VirtualizedContainerService.HintSize="484,182.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="CopyTransactionsAMEX.xaml">
+                                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CopyTransactionsAMEX - Invoke Workflow File (CopyTransactionsAMEX.xaml)" sap:VirtualizedContainerService.HintSize="484,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="CopyTransactionsAMEX.xaml">
                                                                                     <ui:InvokeWorkflowFile.Arguments>
                                                                                       <InArgument x:TypeArguments="x:String" x:Key="in_ReconciliationFileName">[ReconciliationFileName]</InArgument>
                                                                                       <InArgument x:TypeArguments="sd:DataTable" x:Key="in_OutletNames">[OutletNames]</InArgument>
@@ -2496,7 +2496,7 @@
                                                                                       <InArgument x:TypeArguments="s:DateTime" x:Key="in_GetFileDate">[GetFileDate]</InArgument>
                                                                                     </ui:InvokeWorkflowFile.Arguments>
                                                                                   </ui:InvokeWorkflowFile>
-                                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CopyTransactionsPOS_vs_Settlement - Invoke Workflow File (CopyTransactionsPOS_vs_Settlement.xaml)" sap:VirtualizedContainerService.HintSize="484,182.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="CopyTransactionsPOS_vs_Settlement.xaml">
+                                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CopyTransactionsPOS_vs_Settlement - Invoke Workflow File (CopyTransactionsPOS_vs_Settlement.xaml)" sap:VirtualizedContainerService.HintSize="484,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="CopyTransactionsPOS_vs_Settlement.xaml">
                                                                                     <ui:InvokeWorkflowFile.Arguments>
                                                                                       <InArgument x:TypeArguments="x:String" x:Key="in_ReconciliationFileName">[ReconciliationFileName]</InArgument>
                                                                                       <InArgument x:TypeArguments="sd:DataTable" x:Key="in_OutletNames">[OutletNames]</InArgument>
@@ -2505,7 +2505,19 @@
                                                                                       <InArgument x:TypeArguments="s:DateTime" x:Key="in_GetFileDate">[GetFileDate]</InArgument>
                                                                                     </ui:InvokeWorkflowFile.Arguments>
                                                                                   </ui:InvokeWorkflowFile>
-                                                                                  <ui:ForEachFileX DisplayName="Move reconciliation file to POS folder" Folder="[OutConfig(&quot;Reconciliation Folder Path&quot;)]" sap:VirtualizedContainerService.HintSize="484,540" sap2010:WorkflowViewState.IdRef="ForEachFileX_7" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+                                                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" sap2010:Annotation.AnnotationText="Used to populate dates of 'cash sheet' and copy POS sales values here" DisplayName="CopyTransactionsCash - Invoke Workflow File (CopyTransactionsCash.xaml)" sap:VirtualizedContainerService.HintSize="484,221.5" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="CopyTransactionsCash.xaml">
+                                                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                                                      <InArgument x:TypeArguments="s:DateTime" x:Key="in_GetFileDate">[GetFileDate]</InArgument>
+                                                                                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Config">[OutConfig]</InArgument>
+                                                                                      <InArgument x:TypeArguments="x:String" x:Key="in_ReconciliationFileName">[ReconciliationFileName]</InArgument>
+                                                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                      </scg:Dictionary>
+                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                  </ui:InvokeWorkflowFile>
+                                                                                  <ui:ForEachFileX DisplayName="Move reconciliation file to POS folder" Folder="[OutConfig(&quot;Reconciliation Folder Path&quot;)]" sap:VirtualizedContainerService.HintSize="484,546" sap2010:WorkflowViewState.IdRef="ForEachFileX_7" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
                                                                                     <ui:ForEachFileX.Body>
                                                                                       <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                                                                                         <ActivityAction.Argument1>
@@ -2514,18 +2526,18 @@
                                                                                         <ActivityAction.Argument2>
                                                                                           <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                                                                         </ActivityAction.Argument2>
-                                                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,244" sap2010:WorkflowViewState.IdRef="Sequence_149">
+                                                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,247" sap2010:WorkflowViewState.IdRef="Sequence_149">
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                             </scg:Dictionary>
                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[TargetFolderPathPOS]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="416,184" sap2010:WorkflowViewState.IdRef="MoveFile_12" Path="[CurrentFile.FullName]" />
+                                                                                          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[TargetFolderPathPOS]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="MoveFile_12" Path="[CurrentFile.FullName]" />
                                                                                         </Sequence>
                                                                                       </ActivityAction>
                                                                                     </ui:ForEachFileX.Body>
                                                                                   </ui:ForEachFileX>
-                                                                                  <ui:ForEachFileX DisplayName="Move HQ POS Files" Folder="[OutConfig(&quot;POS Folder Path&quot;)]" sap:VirtualizedContainerService.HintSize="484,531" sap2010:WorkflowViewState.IdRef="ForEachFileX_9" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+                                                                                  <ui:ForEachFileX DisplayName="Move HQ POS Files" Folder="[OutConfig(&quot;POS Folder Path&quot;)]" sap:VirtualizedContainerService.HintSize="484,537" sap2010:WorkflowViewState.IdRef="ForEachFileX_9" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
                                                                                     <ui:ForEachFileX.Body>
                                                                                       <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                                                                                         <ActivityAction.Argument1>
@@ -2534,13 +2546,13 @@
                                                                                         <ActivityAction.Argument2>
                                                                                           <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                                                                         </ActivityAction.Argument2>
-                                                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,244" sap2010:WorkflowViewState.IdRef="Sequence_152">
+                                                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,247" sap2010:WorkflowViewState.IdRef="Sequence_152">
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                             </scg:Dictionary>
                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[TargetFolderPath]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="416,184" sap2010:WorkflowViewState.IdRef="MoveFile_14" Path="[CurrentFile.FullName]" />
+                                                                                          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[TargetFolderPath]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="MoveFile_14" Path="[CurrentFile.FullName]" />
                                                                                         </Sequence>
                                                                                       </ActivityAction>
                                                                                     </ui:ForEachFileX.Body>
