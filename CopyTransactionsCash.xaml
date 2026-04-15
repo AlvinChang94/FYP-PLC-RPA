@@ -284,7 +284,7 @@
                         <OutArgument x:TypeArguments="x:String">[TargetDateStr]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[New DateTime(PrevMonthYear, PrevMonth, DateTime.DaysInMonth(PrevMonthYear, PrevMonth) - PrevMonthDayCounter).ToString("dd/MM/yyyy")]</InArgument>
+                        <InArgument x:TypeArguments="x:String">[New DateTime(PrevMonthYear, PrevMonth, DateTime.DaysInMonth(PrevMonthYear, PrevMonth) - PrevMonthDayCounter).ToString("d MMM yyyy")]</InArgument>
                       </Assign.Value>
                     </Assign>
                     <Assign sap:VirtualizedContainerService.HintSize="452,176" sap2010:WorkflowViewState.IdRef="Assign_27">
@@ -314,7 +314,7 @@
                               <OutArgument x:TypeArguments="x:String">[CalculatedCash]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[If(String.IsNullOrWhiteSpace(dt_POS_Settlement.Rows(MatchIndex)(2).ToString), "0", dt_POS_Settlement.Rows(MatchIndex)(2).ToString)]</InArgument>
+                              <InArgument x:TypeArguments="x:String">[If(String.IsNullOrWhiteSpace(dt_POS_Settlement.Rows(MatchIndex)(2).ToString), "", dt_POS_Settlement.Rows(MatchIndex)(2).ToString)]</InArgument>
                             </Assign.Value>
                           </Assign>
                         </Sequence>
@@ -392,7 +392,7 @@
                               <OutArgument x:TypeArguments="x:String">[CalculatedCash]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[If(String.IsNullOrWhiteSpace(dt_POS_Settlement.Rows(MatchIndex)(2).ToString), "0", dt_POS_Settlement.Rows(MatchIndex)(2).ToString)]</InArgument>
+                              <InArgument x:TypeArguments="x:String">[If(String.IsNullOrWhiteSpace(dt_POS_Settlement.Rows(MatchIndex)(2).ToString), "", dt_POS_Settlement.Rows(MatchIndex)(2).ToString)]</InArgument>
                             </Assign.Value>
                           </Assign>
                         </Sequence>
