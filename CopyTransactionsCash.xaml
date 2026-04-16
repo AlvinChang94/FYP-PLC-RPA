@@ -106,7 +106,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CopyTransactionsCash" sap:VirtualizedContainerService.HintSize="805,6072" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CopyTransactionsCash" sap:VirtualizedContainerService.HintSize="717,6072" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -292,7 +292,7 @@
                         <OutArgument x:TypeArguments="x:Int32">[MatchIndex]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:Int32">[dt_POS_Settlement.AsEnumerable().ToList().FindIndex(Function(x) x(0).ToString.Trim = CurrentOutletRow("Outlet Code").ToString.Trim AndAlso CDate(x(1).ToString).ToString("d MMM yyyy") = TargetDateStr)]</InArgument>
+                        <InArgument x:TypeArguments="x:Int32">[dt_POS_Settlement.AsEnumerable().ToList().FindIndex(Function(x) x(0).ToString.Trim = CurrentOutletRow("Outlet Code").ToString.Trim AndAlso Not String.IsNullOrWhiteSpace(x(1).ToString) AndAlso CDate(x(1).ToString).ToString("d MMM yyyy") = TargetDateStr)]</InArgument>
                       </Assign.Value>
                     </Assign>
                     <If Condition="[MatchIndex &gt;= 0]" sap:VirtualizedContainerService.HintSize="452,593.5" sap2010:WorkflowViewState.IdRef="If_6">
@@ -376,7 +376,7 @@
                         <OutArgument x:TypeArguments="x:Int32">[MatchIndex]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:Int32">[dt_POS_Settlement.AsEnumerable().ToList().FindIndex(Function(x) x(0).ToString.Trim = CurrentOutletRow("Outlet Code").ToString.Trim AndAlso CDate(x(1).ToString).ToString("d MMM yyyy") = TargetDateStr)]</InArgument>
+                        <InArgument x:TypeArguments="x:Int32">[dt_POS_Settlement.AsEnumerable().ToList().FindIndex(Function(x) x(0).ToString.Trim = CurrentOutletRow("Outlet Code").ToString.Trim AndAlso Not String.IsNullOrWhiteSpace(x(1).ToString) AndAlso CDate(x(1).ToString).ToString("d MMM yyyy") = TargetDateStr)]</InArgument>
                       </Assign.Value>
                     </Assign>
                     <If Condition="[MatchIndex &gt;= 0]" sap:VirtualizedContainerService.HintSize="452,593.5" sap2010:WorkflowViewState.IdRef="If_7">
