@@ -137,7 +137,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="CalculateTotalNets" sap:VirtualizedContainerService.HintSize="1352,13046" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CalculateTotalNets" sap:VirtualizedContainerService.HintSize="834,13417" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="DaysToLoop" />
       <Variable x:TypeArguments="x:Decimal" Name="RPATotalAMEX" />
@@ -161,14 +161,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Testing speed" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="835,206" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[now.tostring + &quot; start of all locations for AMEX Bank statements&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Testing speed" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="834,207" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[now.tostring + &quot; start of all locations for AMEX Bank statements&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Store the location of the NETS's prefixes into CCPrefixDT" DataTable="[dt_AMEXPrefix]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="835,165" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Sheet1" WorkbookPath="[in_Config(&quot;Mapping Table&quot;)]">
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Store the location of the NETS's prefixes into CCPrefixDT" DataTable="[dt_AMEXPrefix]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="834,164.5" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Sheet1" WorkbookPath="[in_Config(&quot;Mapping Table&quot;)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -177,13 +177,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loops through each UOB statement files" DisplayName="For Each UOBStatementPath" sap:VirtualizedContainerService.HintSize="835,1178" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_UOBStatementList]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loops through each UOB statement files" DisplayName="For Each UOBStatementPath" sap:VirtualizedContainerService.HintSize="834,1162.5" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_UOBStatementList]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="UOBStatementPath" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,1016" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,1000" sap2010:WorkflowViewState.IdRef="Sequence_27">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="excelPath" />
             </Sequence.Variables>
@@ -192,7 +192,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="484,179" sap2010:WorkflowViewState.IdRef="Assign_40">
+            <Assign sap:VirtualizedContainerService.HintSize="484,176" sap2010:WorkflowViewState.IdRef="Assign_40">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[excelPath]</OutArgument>
               </Assign.To>
@@ -200,13 +200,13 @@
                 <InArgument x:TypeArguments="x:String">[System.IO.Path.ChangeExtension(UOBStatementPath, ".xlsx")]</InArgument>
               </Assign.Value>
             </Assign>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="484,403" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[UOBStatementPath]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="484,401.5" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[UOBStatementPath]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,90.5" sap2010:WorkflowViewState.IdRef="Sequence_61">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -216,14 +216,14 @@
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
             </ueab:ExcelApplicationCard>
-            <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Store the Nets Transactions into dt_AMEX" DataTable="[dt_AMEX]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="484,155" sap2010:WorkflowViewState.IdRef="ReadRange_8" PreserveFormat="True" Range="A4" SheetName="[System.IO.Path.GetFileNameWithoutExtension(UOBStatementPath)]" WorkbookPath="[UOBStatementPath]">
+            <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Store the Nets Transactions into dt_AMEX" DataTable="[dt_AMEX]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="484,151" sap2010:WorkflowViewState.IdRef="ReadRange_8" PreserveFormat="True" Range="A4" SheetName="[System.IO.Path.GetFileNameWithoutExtension(UOBStatementPath)]" WorkbookPath="[UOBStatementPath]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ReadRange>
-            <Assign sap2010:Annotation.AnnotationText="Store uob file path and datatable info into dictionary" sap:VirtualizedContainerService.HintSize="484,215" sap2010:WorkflowViewState.IdRef="Assign_15">
+            <Assign sap2010:Annotation.AnnotationText="Store uob file path and datatable info into dictionary" sap:VirtualizedContainerService.HintSize="484,211.5" sap2010:WorkflowViewState.IdRef="Assign_15">
               <Assign.To>
                 <OutArgument x:TypeArguments="sd:DataTable">[UOBFilesCache(UOBStatementPath)]</OutArgument>
               </Assign.To>
@@ -247,7 +247,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <If sap2010:Annotation.AnnotationText="if the file's month is earlier than today's month,&#xA;set the DaysToLoop as the full 30 or 31 days in a month&#xA;else set the DaysToLoop as the current day" Condition="[(in_GetFileDate.Year &lt; Today.Year) OrElse &#xA;(in_GetFileDate.Year = Today.Year And in_GetFileDate.Month &lt; Today.Month)]" sap:VirtualizedContainerService.HintSize="835,790" sap2010:WorkflowViewState.IdRef="If_11">
+    <If sap2010:Annotation.AnnotationText="if the file's month is earlier than today's month,&#xA;set the DaysToLoop as the full 30 or 31 days in a month&#xA;else set the DaysToLoop as the current day" Condition="[(in_GetFileDate.Year &lt; Today.Year) OrElse &#xA;(in_GetFileDate.Year = Today.Year And in_GetFileDate.Month &lt; Today.Month)]" sap:VirtualizedContainerService.HintSize="834,776.5" sap2010:WorkflowViewState.IdRef="If_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -256,13 +256,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,279" sap2010:WorkflowViewState.IdRef="Sequence_40">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,271.5" sap2010:WorkflowViewState.IdRef="Sequence_40">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap2010:Annotation.AnnotationText="Set DaysToLoop as 30 or 31 depending on which month is being calculated" sap:VirtualizedContainerService.HintSize="416,215" sap2010:WorkflowViewState.IdRef="Assign_29">
+          <Assign sap2010:Annotation.AnnotationText="Set DaysToLoop as 30 or 31 depending on which month is being calculated" sap:VirtualizedContainerService.HintSize="416,211.5" sap2010:WorkflowViewState.IdRef="Assign_29">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[DaysToLoop]</OutArgument>
             </Assign.To>
@@ -278,13 +278,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,311" sap2010:WorkflowViewState.IdRef="Sequence_41">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,304.5" sap2010:WorkflowViewState.IdRef="Sequence_41">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap2010:Annotation.AnnotationText="Set DaysToLoop as today's day as the number of days to loop&#xA;e.g: today.day from 15/10/2025 = 15&#xA;Therefore, loops from 1 - 15." sap:VirtualizedContainerService.HintSize="416,247" sap2010:WorkflowViewState.IdRef="Assign_30">
+          <Assign sap2010:Annotation.AnnotationText="Set DaysToLoop as today's day as the number of days to loop&#xA;e.g: today.day from 15/10/2025 = 15&#xA;Therefore, loops from 1 - 15." sap:VirtualizedContainerService.HintSize="416,244.5" sap2010:WorkflowViewState.IdRef="Assign_30">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[DaysToLoop]</OutArgument>
             </Assign.To>
@@ -300,7 +300,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Initialize WriteDT for writing data into excel (For faster speed) - for the 3 column added to excel for Nets statement check" DataTable="[dt_Write]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="835,153" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;RPACalculatedAMEX&quot; msdata:Caption=&quot;&quot; type=&quot;xs:decimal&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Initialize WriteDT for writing data into excel (For faster speed) - for the 3 column added to excel for Nets statement check" DataTable="[dt_Write]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="834,153" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;RPACalculatedAMEX&quot; msdata:Caption=&quot;&quot; type=&quot;xs:decimal&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -309,57 +309,57 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Used with &quot;Use Excel FIle&quot; to open file" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="835,9530" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Used with &quot;Use Excel FIle&quot; to open file" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="834,9929" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="801,9380" sap2010:WorkflowViewState.IdRef="Sequence_31">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="800,9779" sap2010:WorkflowViewState.IdRef="Sequence_31">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" sap2010:Annotation.AnnotationText="Target POS FIle to read and write" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="767,9114" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_UpdateFilePath]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" sap2010:Annotation.AnnotationText="Target POS FIle to read and write" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="766,9517" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_UpdateFilePath]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="POSFile" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="733,8774" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="732,9175" sap2010:WorkflowViewState.IdRef="Sequence_32">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Repeat based on the current day to update all the days following up today" DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="699,8508" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_2" NumberOfTimes="[DaysToLoop]" StartAt="1">
+                    <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Repeat based on the current day to update all the days following up today" DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="698,8913" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_2" NumberOfTimes="[DaysToLoop]" StartAt="1">
                       <ui:RepeatNumberOfTimesX.Body>
                         <ActivityAction x:TypeArguments="x:Int32">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentDay" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="665,8274" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="664,8681.5" sap2010:WorkflowViewState.IdRef="Sequence_26">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If sap2010:Annotation.AnnotationText="IF RangeDayMode is active, E.g: y, Y, Yes, etc.&#xA;skip all days except days in range" Condition="[in_Config(&quot;RangeDayMode(Y/N)&quot;).Equals(&quot;Y&quot;, StringComparison.OrdinalIgnoreCase) AndAlso (CurrentDay &lt; CInt(in_Config(&quot;StartDayValue&quot;))) Or (CurrentDay &gt; CInt(in_Config(&quot;EndDayValue&quot;)))]" sap:VirtualizedContainerService.HintSize="631,329" sap2010:WorkflowViewState.IdRef="If_14">
+                            <If sap2010:Annotation.AnnotationText="IF RangeDayMode is active, E.g: y, Y, Yes, etc.&#xA;skip all days except days in range" Condition="[in_Config(&quot;RangeDayMode(Y/N)&quot;).Equals(&quot;Y&quot;, StringComparison.OrdinalIgnoreCase) AndAlso (CurrentDay &lt; CInt(in_Config(&quot;StartDayValue&quot;))) Or (CurrentDay &gt; CInt(in_Config(&quot;EndDayValue&quot;)))]" sap:VirtualizedContainerService.HintSize="630,317" sap2010:WorkflowViewState.IdRef="If_14">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,116" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_59">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:Continue sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                  <ui:Continue sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Continue_2" />
                                 </Sequence>
                               </If.Then>
                               <If.Else>
@@ -373,8 +373,8 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="631,179" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Sheet &quot; + CurrentDay.ToString+ &quot;---&quot;+now().tostring + &quot; Start of reading target POS file in AMEX statements&quot;]" />
-                            <Assign sap2010:Annotation.AnnotationText="Initialize Total Overall Nets as 0" sap:VirtualizedContainerService.HintSize="631,210" sap2010:WorkflowViewState.IdRef="Assign_27">
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="630,176" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Sheet &quot; + CurrentDay.ToString+ &quot;---&quot;+now().tostring + &quot; Start of reading target POS file in AMEX statements&quot;]" />
+                            <Assign sap2010:Annotation.AnnotationText="Initialize Total Overall Nets as 0" sap:VirtualizedContainerService.HintSize="560,207" sap2010:WorkflowViewState.IdRef="Assign_27">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Decimal">[RPATotalAMEX]</OutArgument>
                               </Assign.To>
@@ -387,14 +387,14 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <ueab:ReadRangeX sap2010:Annotation.AnnotationText="Store the Target POS excel file into dt_Locations" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="560,237.33333333333334" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[POSFile.Sheet(CurrentDay.ToString(&quot;D2&quot;)).Range(&quot;A4:D300&quot;)]" SaveTo="[dt_Locations]">
+                            <ueab:ReadRangeX sap2010:Annotation.AnnotationText="Store the Target POS excel file into dt_Locations" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="630,237" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[POSFile.Sheet(CurrentDay.ToString(&quot;D2&quot;)).Range(&quot;A4:D300&quot;)]" SaveTo="[dt_Locations]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ueab:ReadRangeX>
-                            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Remove empty rows if any and remove row with &quot;TOTAL&quot;" DataTable="[dt_Locations]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="560,240.66666666666666" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[dt_Locations]" SelectColumnsMode="Remove">
+                            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Remove empty rows if any and remove row with &quot;TOTAL&quot;" DataTable="[dt_Locations]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="560,240.5" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[dt_Locations]" SelectColumnsMode="Remove">
                               <ui:FilterDataTable.Filters>
                                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                   <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="NOTEMPTY">
@@ -423,7 +423,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:FilterDataTable>
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="560,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="560,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                               <ui:CommentOut.Body>
                                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,202" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -449,20 +449,20 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:CommentOut>
-                            <ui:ClearDataTable sap2010:Annotation.AnnotationText="Clear any data inside dt_Write each loop" DataTable="[dt_Write]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="630.6666666666666,148.66666666666666" sap2010:WorkflowViewState.IdRef="ClearDataTable_5">
+                            <ui:ClearDataTable sap2010:Annotation.AnnotationText="Clear any data inside dt_Write each loop" DataTable="[dt_Write]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="630,144.5" sap2010:WorkflowViewState.IdRef="ClearDataTable_5">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:ClearDataTable>
-                            <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="loop each location that was in the POS excel sheet" CurrentIndex="[CurrentLocationRowIndex]" DataTable="[dt_Locations]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="630.6666666666666,5839.333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                            <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="loop each location that was in the POS excel sheet" CurrentIndex="[CurrentLocationRowIndex]" DataTable="[dt_Locations]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="630,6273" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentLocationRow" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="628.6666666666666,5620.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="628,6059" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredAMEXPrefix" />
                                     </Sequence.Variables>
@@ -472,7 +472,7 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign sap2010:Annotation.AnnotationText="Initialize Total AMEX through each location as 0" sap:VirtualizedContainerService.HintSize="594.6666666666666,211.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                    <Assign sap2010:Annotation.AnnotationText="Initialize Total AMEX through each location as 0" sap:VirtualizedContainerService.HintSize="594,207" sap2010:WorkflowViewState.IdRef="Assign_8">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:Decimal">[RPAAMEXAmt]</OutArgument>
                                       </Assign.To>
@@ -485,7 +485,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </Assign>
-                                    <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Search through the dt_AMEXPrefix to save the prefix of the current location as AMEXPrefixLocation" DataTable="[dt_AMEXPrefix]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="524,398" sap2010:WorkflowViewState.IdRef="LookupDataTable_4" LookupColumnName="POS Store" LookupValue="[CurrentLocationRow(&quot;Store&quot;).ToString]" TargetColumnName="Outlet Code">
+                                    <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Search through the dt_AMEXPrefix to save the prefix of the current location as AMEXPrefixLocation" DataTable="[dt_AMEXPrefix]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="594,392.5" sap2010:WorkflowViewState.IdRef="LookupDataTable_4" LookupColumnName="POS Store" LookupValue="[CurrentLocationRow(&quot;Store&quot;).ToString]" TargetColumnName="Outlet Code">
                                       <ui:LookupDataTable.CellValue>
                                         <OutArgument x:TypeArguments="x:Object">[AMEXPrefixLocation]</OutArgument>
                                       </ui:LookupDataTable.CellValue>
@@ -497,7 +497,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:LookupDataTable>
-                                    <ui:FilterDataTable DataTable="[dt_AMEXPrefix]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="594.6666666666666,200" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[dt_FilteredAMEXPrefix]" SelectColumnsMode="Remove">
+                                    <ui:FilterDataTable DataTable="[dt_AMEXPrefix]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="594,196" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[dt_FilteredAMEXPrefix]" SelectColumnsMode="Remove">
                                       <ui:FilterDataTable.Filters>
                                         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -516,13 +516,13 @@
                                         </scg:List>
                                       </ui:FilterDataTable.SelectColumns>
                                     </ui:FilterDataTable>
-                                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, sd:DataTable)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loops through each DBS File datatable if there are multiple files" DisplayName="For Each dt_UOBFiles" sap:VirtualizedContainerService.HintSize="594.6666666666666,2139.3333333333335" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[UOBFilesCache]">
+                                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, sd:DataTable)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loops through each DBS File datatable if there are multiple files" DisplayName="For Each dt_UOBFiles" sap:VirtualizedContainerService.HintSize="594,2605.5" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[UOBFilesCache]">
                                       <ui:ForEach.Body>
                                         <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, sd:DataTable)">
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, sd:DataTable)" Name="dt_UOBFiles" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592.6666666666666,1972.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,2443" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="sd:DataTable" Name="dt_CurrentDate" />
                                               <Variable x:TypeArguments="x:String" Name="ReceiptDate" />
@@ -532,7 +532,7 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Assign sap:VirtualizedContainerService.HintSize="558.6666666666666,180.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                            <Assign sap:VirtualizedContainerService.HintSize="558,176" sap2010:WorkflowViewState.IdRef="Assign_34">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="sd:DataTable">[dt_CurrentDate]</OutArgument>
                                               </Assign.To>
@@ -540,7 +540,7 @@
                                                 <InArgument x:TypeArguments="sd:DataTable">[in_OutputExcel.AsEnumerable().Where(Function(r) CDate(r("Date")).Date = CDate((in_GetFileDate.Year.ToString + "-" + in_GetFileDate.Month.ToString + "-" + CurrentDay.ToString).Trim).Date).CopyToDataTable()]</InArgument>
                                               </Assign.Value>
                                             </Assign>
-                                            <Assign sap:VirtualizedContainerService.HintSize="558.6666666666666,180.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_35">
+                                            <Assign sap:VirtualizedContainerService.HintSize="558,176" sap2010:WorkflowViewState.IdRef="Assign_35">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="x:String">[ReceiptDate]</OutArgument>
                                               </Assign.To>
@@ -548,47 +548,48 @@
                                                 <InArgument x:TypeArguments="x:String">[CDate(dt_CurrentDate.Rows(0)("BankReceiptDateAMEX")).ToString("dd-MMM-yyyy")]</InArgument>
                                               </Assign.Value>
                                             </Assign>
-                                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_FilteredAMEXPrefix]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="558.6666666666666,1547.3333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+                                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_FilteredAMEXPrefix]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="558,2031" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
                                               <ui:ForEachRow.Body>
                                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentCodeRow" />
                                                   </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556.6666666666666,1368.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556,1857" sap2010:WorkflowViewState.IdRef="Sequence_52">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="522.6666666666666,290.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="522,285.5" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                                                       <ui:CommentOut.Body>
-                                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,174.5" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;entering into if else for checking code row: &quot;+CurrentCodeRow(&quot;AMEX MID&quot;).ToString]" />
+                                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114.5" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;entering into if else for checking code row: &quot;+CurrentCodeRow(&quot;AMEX MID&quot;).ToString]" />
                                                         </Sequence>
                                                       </ui:CommentOut.Body>
                                                     </ui:CommentOut>
-                                                    <If Condition="[dt_UOBFiles.Value.AsEnumerable().Where(Function(r) Not IsDBNull(r(&quot; Remarks &quot;)) AndAlso Decimal.TryParse(r(&quot; Remarks &quot;).ToString.Trim, Nothing) AndAlso Not String.IsNullOrEmpty(CurrentCodeRow(&quot;AMEX MID&quot;).ToString) AndAlso r(&quot; Remarks &quot;).ToString.Trim.Replace(&quot;.&quot;, &quot;&quot;).StartsWith(CurrentCodeRow(&quot;AMEX MID&quot;).ToString) AndAlso DateTime.ParseExact(r(&quot; Date &quot;).ToString.Trim, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture).ToString(&quot;dd-MMM-yyyy&quot;).Equals(ReceiptDate) ).Count &gt; 0]" sap:VirtualizedContainerService.HintSize="522.6666666666666,1014" sap2010:WorkflowViewState.IdRef="If_13">
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="522,176" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;1. SEARCHING -&gt; Store: &quot; + CurrentLocationRow(&quot;Store&quot;).ToString + &quot; | MID: &quot; + CurrentCodeRow(&quot;AMEX MID&quot;).ToString + &quot; | Target Bank Date: &quot; + ReceiptDate]" />
+                                                    <If Condition="[dt_UOBFiles.Value.AsEnumerable().Where(Function(r) Not IsDBNull(r(&quot; Remarks &quot;)) AndAlso Not String.IsNullOrWhiteSpace(CurrentCodeRow(&quot;AMEX MID&quot;).ToString) AndAlso IsNumeric(r(&quot; Remarks &quot;).ToString.Trim) AndAlso CDbl(r(&quot; Remarks &quot;).ToString.Trim).ToString(&quot;F0&quot;).StartsWith(CurrentCodeRow(&quot;AMEX MID&quot;).ToString.Trim) AndAlso Not IsDBNull(r(&quot; Date &quot;)) AndAlso DateTime.ParseExact(r(&quot; Date &quot;).ToString.Trim, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture).ToString(&quot;dd-MMM-yyyy&quot;).Equals(ReceiptDate)).Count &gt; 0]" sap:VirtualizedContainerService.HintSize="522,1335.5" sap2010:WorkflowViewState.IdRef="If_13">
                                                       <If.Then>
-                                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="520.6666666666666,706.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="520,864.5" sap2010:WorkflowViewState.IdRef="Sequence_55">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <Assign sap:VirtualizedContainerService.HintSize="486.6666666666667,180.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_37">
+                                                          <Assign sap:VirtualizedContainerService.HintSize="486,176" sap2010:WorkflowViewState.IdRef="Assign_37">
                                                             <Assign.To>
                                                               <OutArgument x:TypeArguments="sd:DataTable">[dt_FilteredAMEX]</OutArgument>
                                                             </Assign.To>
                                                             <Assign.Value>
-                                                              <InArgument x:TypeArguments="sd:DataTable">[dt_UOBFiles.Value.AsEnumerable().Where(Function(r) Not IsDBNull(r(" Remarks ")) AndAlso Decimal.TryParse(r(" Remarks ").ToString.Trim, Nothing) AndAlso Not String.IsNullOrEmpty(CurrentCodeRow("AMEX MID").ToString) AndAlso r(" Remarks ").ToString.Trim.StartsWith(CurrentCodeRow("AMEX MID").ToString) AndAlso DateTime.ParseExact(r(" Date ").ToString.Trim, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture).ToString("dd-MMM-yyyy").Equals(ReceiptDate) ).CopyToDataTable()]</InArgument>
+                                                              <InArgument x:TypeArguments="sd:DataTable">[dt_UOBFiles.Value.AsEnumerable().Where(Function(r) Not IsDBNull(r(" Remarks ")) AndAlso Not String.IsNullOrWhiteSpace(CurrentCodeRow("AMEX MID").ToString) AndAlso IsNumeric(r(" Remarks ").ToString.Trim) AndAlso CDbl(r(" Remarks ").ToString.Trim).ToString("F0").StartsWith(CurrentCodeRow("AMEX MID").ToString.Trim) AndAlso Not IsDBNull(r(" Date ")) AndAlso DateTime.ParseExact(r(" Date ").ToString.Trim, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture).ToString("dd-MMM-yyyy").Equals(ReceiptDate)).CopyToDataTable()]</InArgument>
                                                             </Assign.Value>
                                                           </Assign>
-                                                          <Assign sap:VirtualizedContainerService.HintSize="486.6666666666667,180.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_36">
+                                                          <Assign sap:VirtualizedContainerService.HintSize="486,176" sap2010:WorkflowViewState.IdRef="Assign_36">
                                                             <Assign.To>
                                                               <OutArgument x:TypeArguments="x:Decimal">[RPAAMEXAmt]</OutArgument>
                                                             </Assign.To>
@@ -596,28 +597,30 @@
                                                               <InArgument x:TypeArguments="x:Decimal">[RPAAMEXAmt + dt_FilteredAMEX.AsEnumerable().Where(Function(r) Not String.IsNullOrEmpty(r(" Deposit ").ToString)).Sum(Function(r) CDec(r(" Deposit ").ToString))]</InArgument>
                                                             </Assign.Value>
                                                           </Assign>
-                                                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,281.3333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,176" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;2. SUCCESS! -&gt; Found match for &quot; + CurrentLocationRow(&quot;Store&quot;).ToString + &quot; | Calculated AMEX: $&quot; + RPAAMEXAmt.ToString]" />
+                                                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,276.5" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                                                             <ui:CommentOut.Body>
-                                                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,174.5" sap2010:WorkflowViewState.IdRef="Sequence_63">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;RPMEXAmT::::&quot;+RPAAMEXAmt.ToString]" />
+                                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114.5" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;RPMEXAmT::::&quot;+RPAAMEXAmt.ToString]" />
                                                               </Sequence>
                                                             </ui:CommentOut.Body>
                                                           </ui:CommentOut>
                                                         </Sequence>
                                                       </If.Then>
                                                       <If.Else>
-                                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="520.6666666666666,172.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="520,340.5" sap2010:WorkflowViewState.IdRef="Sequence_56">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:ClearDataTable DataTable="[dt_FilteredAMEX]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="486.6666666666667,108.66666666666667" sap2010:WorkflowViewState.IdRef="ClearDataTable_6" />
+                                                          <ui:ClearDataTable DataTable="[dt_FilteredAMEX]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="486,113.5" sap2010:WorkflowViewState.IdRef="ClearDataTable_6" />
+                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,167" sap2010:WorkflowViewState.IdRef="LogMessage_11" Message="[&quot;2. FAILED -&gt; No AMEX transactions found in UOB for &quot; + CurrentLocationRow(&quot;Store&quot;).ToString + &quot; on &quot; + ReceiptDate]" />
                                                         </Sequence>
                                                       </If.Else>
                                                     </If>
@@ -636,7 +639,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:ForEach>
-                                    <Assign sap2010:Annotation.AnnotationText="Add the current location's total Nets into the overall total Nets" sap:VirtualizedContainerService.HintSize="594.6666666666666,225.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                    <Assign sap2010:Annotation.AnnotationText="Add the current location's total Nets into the overall total Nets" sap:VirtualizedContainerService.HintSize="594,220.5" sap2010:WorkflowViewState.IdRef="Assign_28">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:Decimal">[RPATotalAMEX]</OutArgument>
                                       </Assign.To>
@@ -649,7 +652,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </Assign>
-                                    <Assign sap2010:Annotation.AnnotationText="Assign to boolean variable IsDecimalValid by checking if the current row's NETS Column is convertible to decimal" sap:VirtualizedContainerService.HintSize="524,242" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                    <Assign sap2010:Annotation.AnnotationText="Assign to boolean variable IsDecimalValid by checking if the current row's NETS Column is convertible to decimal" sap:VirtualizedContainerService.HintSize="594,237" sap2010:WorkflowViewState.IdRef="Assign_17">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:Boolean">[IsDecimalValid]</OutArgument>
                                       </Assign.To>
