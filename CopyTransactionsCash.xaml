@@ -114,13 +114,13 @@
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CopyTransactionsCash" sap:VirtualizedContainerService.HintSize="860.6666666666667,6926.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CopyTransactionsCash" sap:VirtualizedContainerService.HintSize="805,6962" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="604,6904" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="604,6939" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_POS_Settlement" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_Cash" />
@@ -139,14 +139,14 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="False" sap2010:Annotation.AnnotationText="use a single LINQ command to slice the top two rows off" DataTable="[dt_POS_Settlement]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="570,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="I:K" SheetName="POS Sales vs Settlement report" WorkbookPath="[in_Config(&quot;Reconciliation Folder Path&quot;) + &quot;\&quot; + in_ReconciliationFileName]">
+      <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="False" sap2010:Annotation.AnnotationText="use a single LINQ command to slice the top two rows off" DataTable="[dt_POS_Settlement]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="570,164.5" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="I:K" SheetName="POS Sales vs Settlement report" WorkbookPath="[in_Config(&quot;Reconciliation Folder Path&quot;) + &quot;\&quot; + in_ReconciliationFileName]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <Assign sap2010:Annotation.AnnotationText="mathematically discards Row 0 and Row 1, leaving only pure transaction data" sap:VirtualizedContainerService.HintSize="570,221.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_17">
+      <Assign sap2010:Annotation.AnnotationText="mathematically discards Row 0 and Row 1, leaving only pure transaction data" sap:VirtualizedContainerService.HintSize="570,220.5" sap2010:WorkflowViewState.IdRef="Assign_17">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[dt_POS_Settlement]</OutArgument>
         </Assign.To>
@@ -177,7 +177,7 @@
         </ui:FilterDataTable.SelectColumns>
       </ui:FilterDataTable>
       <ui:BuildDataTable DataTable="[dt_Cash]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="570,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Outlet&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;POS_x0020_Sales&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-      <If Condition="[in_GetFileDate.Month = 1]" sap:VirtualizedContainerService.HintSize="570,948" sap2010:WorkflowViewState.IdRef="If_5">
+      <If Condition="[in_GetFileDate.Month = 1]" sap:VirtualizedContainerService.HintSize="570,947.5" sap2010:WorkflowViewState.IdRef="If_5">
         <If.Then>
           <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,404" sap2010:WorkflowViewState.IdRef="Sequence_14">
             <sap:WorkflowViewStateService.ViewState>
@@ -229,7 +229,7 @@
           </Sequence>
         </If.Else>
       </If>
-      <Assign sap:VirtualizedContainerService.HintSize="570,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_28">
+      <Assign sap:VirtualizedContainerService.HintSize="570,176" sap2010:WorkflowViewState.IdRef="Assign_28">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[DaysToLoop]</OutArgument>
         </Assign.To>
@@ -237,13 +237,13 @@
           <InArgument x:TypeArguments="x:Int32">[DateTime.DaysInMonth(in_GetFileDate.Year, in_GetFileDate.Month)]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_OutletNames]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="570,3918" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_OutletNames]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="570,3915.5" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentOutletRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,3734" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,3732.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_16">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -355,9 +355,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InterruptibleWhile>
-              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[DayCounter &lt; DaysToLoop]" DisplayName="While" sap:VirtualizedContainerService.HintSize="488,1530" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_4">
+              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[DayCounter &lt; DaysToLoop]" DisplayName="While" sap:VirtualizedContainerService.HintSize="488,1528.6666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_4">
                 <ui:InterruptibleWhile.Body>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1398" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1396.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_20">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -371,7 +371,7 @@
                         <InArgument x:TypeArguments="x:Int32">[DayCounter + 1]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_32">
+                    <Assign sap:VirtualizedContainerService.HintSize="452,176" sap2010:WorkflowViewState.IdRef="Assign_32">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[TargetDateStr]</OutArgument>
                       </Assign.To>
@@ -379,7 +379,7 @@
                         <InArgument x:TypeArguments="x:String">[New DateTime(in_GetFileDate.Year, in_GetFileDate.Month, DayCounter).ToString("d MMM yyyy")]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_33">
+                    <Assign sap:VirtualizedContainerService.HintSize="452,176" sap2010:WorkflowViewState.IdRef="Assign_33">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">[MatchIndex]</OutArgument>
                       </Assign.To>
@@ -434,31 +434,31 @@
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
       <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_Cash]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="570,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="CASH" StartingCell="F4" WorkbookPath="[in_Config(&quot;Reconciliation Folder Path&quot;) + &quot;\&quot; + in_ReconciliationFileName]" />
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="570,836.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="570,876" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,726.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,766" sap2010:WorkflowViewState.IdRef="Sequence_25">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,666.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" UseTemplate="True" WorkbookPath="[in_Config(&quot;Reconciliation Folder Path&quot;) + &quot;\&quot; + in_ReconciliationFileName]">
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,706" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" UseTemplate="True" WorkbookPath="[in_Config(&quot;Reconciliation Folder Path&quot;) + &quot;\&quot; + in_ReconciliationFileName]">
                 <ueab:ExcelApplicationCard.Body>
                   <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,340.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,341" sap2010:WorkflowViewState.IdRef="Sequence_24">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:ExecuteMacroX Result="{x:Null}" DisplayName="Run Spreadsheet Macro" sap:VirtualizedContainerService.HintSize="434,258" sap2010:WorkflowViewState.IdRef="ExecuteMacroX_1" MacroName="ApplyConditionalFormatting_Cash" Workbook="[Excel]">
+                      <ueab:ExecuteMacroX Result="{x:Null}" DisplayName="Run Spreadsheet Macro" sap:VirtualizedContainerService.HintSize="434,281" sap2010:WorkflowViewState.IdRef="ExecuteMacroX_1" MacroName="ApplyConditionalFormatting_Cash" Workbook="[Excel]">
                         <ueab:ExecuteMacroX.Body>
                           <ActivityAction>
                             <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_23">
