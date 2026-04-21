@@ -133,7 +133,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="637,683" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="805,683" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="GetFileDate" />
       <Variable x:TypeArguments="x:Boolean" Name="IsFutureDate" />
@@ -163,7 +163,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="634,660" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="643,558.6566666666666" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="OutputExcel" />
         <Variable x:TypeArguments="x:String" Name="PreviousDateRange" />
@@ -1190,15 +1190,15 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Sequence sap2010:Annotation.AnnotationText="This is to get list of Statement files that:&#xA;1) For NET, contains &quot;UOB&quot; in file name&#xA;2) For CC, contain &quot;DBS&quot; in file name&#xA;" DisplayName="Get Statements list Sequence" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                        <Sequence sap2010:Annotation.AnnotationText="This is to get list of Statement files that:&#xA;1) For NET, contains &quot;UOB&quot; in file name&#xA;2) For CC, contain &quot;DBS&quot; in file name&#xA;" DisplayName="Get Statements list Sequence" sap:VirtualizedContainerService.HintSize="840,4208.5" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:Comment sap:VirtualizedContainerService.HintSize="673,303" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// &#xA;&#xA;//1) Get all files from &quot;RPA Statements&quot; folder&#xA;&#xA;//2) For each file, check if filename contains:&#xA;- UOB: Add filename to UOBStatementList (NET transactions)&#xA;- DBS: Add filename to DBSStatementList (CC transactions)&#xA;//&#xA;3) Get filename of POS excel from POS folder&#xA;40 Create POS folder with file, append folder with current datetime (up to seconds) eg. POS Oct 2025_10-7-25 9_47_25&#xA;" />
-                                          <ui:MultipleAssign sap2010:Annotation.AnnotationText="Initialize DBSStatementList, UOBStatementList and UOBStatementListCSV as Lists of strings" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="673,225" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                                          <ui:Comment sap:VirtualizedContainerService.HintSize="806,303.5" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// &#xA;&#xA;//1) Get all files from &quot;RPA Statements&quot; folder&#xA;&#xA;//2) For each file, check if filename contains:&#xA;- UOB: Add filename to UOBStatementList (NET transactions)&#xA;- DBS: Add filename to DBSStatementList (CC transactions)&#xA;//&#xA;3) Get filename of POS excel from POS folder&#xA;40 Create POS folder with file, append folder with current datetime (up to seconds) eg. POS Oct 2025_10-7-25 9_47_25&#xA;" />
+                                          <ui:MultipleAssign sap2010:Annotation.AnnotationText="Initialize DBSStatementList, UOBStatementList and UOBStatementListCSV as Lists of strings" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="806,225" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                                             <ui:MultipleAssign.AssignOperations>
                                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -1226,7 +1226,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:MultipleAssign>
-                                          <ui:ForEachFileX sap2010:Annotation.AnnotationText="Loops through each file in Payment Statement Folder" DisplayName="For Each File in Folder" Folder="[OutConfig(&quot;Payment Folder Path&quot;)]" sap:VirtualizedContainerService.HintSize="673,2904" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+                                          <ui:ForEachFileX sap2010:Annotation.AnnotationText="Loops through each file in Payment Statement Folder" DisplayName="For Each File in Folder" Folder="[OutConfig(&quot;Payment Folder Path&quot;)]" sap:VirtualizedContainerService.HintSize="806,2820" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
                                             <ui:ForEachFileX.Body>
                                               <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                                                 <ActivityAction.Argument1>
@@ -1235,7 +1235,7 @@
                                                 <ActivityAction.Argument2>
                                                   <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                                 </ActivityAction.Argument2>
-                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="639,2577" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="772,2490" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="x:String" Name="newfile" />
                                                   </Sequence.Variables>
@@ -1245,9 +1245,9 @@
                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:IfElseIfV2 sap2010:Annotation.AnnotationText="If filename contains &quot;DBS&quot;&#xA;Else if filename contains &quot;UOB&quot;" Condition="[CurrentFile.ToString.Contains(&quot;DBS&quot;) And CurrentFile.ToString.Contains(&quot;.xlsx&quot;)]" DisplayName="Filter Bank Statement folder files" sap:VirtualizedContainerService.HintSize="605,2517" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+                                                  <ui:IfElseIfV2 sap2010:Annotation.AnnotationText="If filename contains &quot;DBS&quot;&#xA;Else if filename contains &quot;UOB&quot;" Condition="[CurrentFile.ToString.ToLower().Contains(&quot;dbs&quot;) AndAlso CurrentFile.ToString.ToLower().Contains(&quot;.xlsx&quot;)]" DisplayName="Filter Bank Statement folder files" sap:VirtualizedContainerService.HintSize="738,2430" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
                                                     <ui:IfElseIfV2.Else>
-                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="603,94" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="736,90.5" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1260,36 +1260,36 @@
                                                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                                         <ui:IfElseIfBlock BlockType="ElseIf" Condition="[CurrentFile.ToString.Contains(&quot;UOB&quot;) And CurrentFile.ToString.Contains(&quot;.csv&quot;)]" DisplayName="If else if block" sap:VirtualizedContainerService.HintSize="334,37.33333333333334" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_5">
                                                           <ui:IfElseIfBlock.Then>
-                                                            <Sequence DisplayName="READING UOB FILE" sap:VirtualizedContainerService.HintSize="603,1900" sap2010:WorkflowViewState.IdRef="Sequence_120">
+                                                            <Sequence DisplayName="READING UOB FILE" sap:VirtualizedContainerService.HintSize="736,1827.5" sap2010:WorkflowViewState.IdRef="Sequence_120">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <Sequence sap:VirtualizedContainerService.HintSize="569,1643" sap2010:WorkflowViewState.IdRef="Sequence_161">
+                                                              <Sequence sap:VirtualizedContainerService.HintSize="702,1577.5" sap2010:WorkflowViewState.IdRef="Sequence_161">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="507,650" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[CurrentFile.ToString]">
+                                                                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="507,607.5" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[CurrentFile.ToString]">
                                                                   <ueab:ExcelApplicationCard.Body>
                                                                     <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                                                       <ActivityAction.Argument>
                                                                         <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                                                                       </ActivityAction.Argument>
-                                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,301" sap2010:WorkflowViewState.IdRef="Sequence_162">
+                                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,296.5" sap2010:WorkflowViewState.IdRef="Sequence_162">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <ueab:SaveExcelFileAsX DisplayName="Save Excel File As" FilePath="[System.IO.Path.Combine(System.IO.Path.GetDirectoryName(CurrentFile.ToString), System.IO.Path.GetFileNameWithoutExtension(CurrentFile.ToString))]" sap:VirtualizedContainerService.HintSize="434,237" sap2010:WorkflowViewState.IdRef="SaveExcelFileAsX_2" SaveAsFileType="OpenXmlWorkbook" Workbook="[Excel]" />
+                                                                        <ueab:SaveExcelFileAsX DisplayName="Save Excel File As" FilePath="[System.IO.Path.Combine(System.IO.Path.GetDirectoryName(CurrentFile.ToString), System.IO.Path.GetFileNameWithoutExtension(CurrentFile.ToString))]" sap:VirtualizedContainerService.HintSize="434,236.5" sap2010:WorkflowViewState.IdRef="SaveExcelFileAsX_2" SaveAsFileType="OpenXmlWorkbook" Workbook="[Excel]" />
                                                                       </Sequence>
                                                                     </ActivityAction>
                                                                   </ueab:ExcelApplicationCard.Body>
                                                                 </ueab:ExcelApplicationCard>
-                                                                <Assign sap:VirtualizedContainerService.HintSize="507,179" sap2010:WorkflowViewState.IdRef="Assign_42">
+                                                                <Assign sap:VirtualizedContainerService.HintSize="507,176" sap2010:WorkflowViewState.IdRef="Assign_42">
                                                                   <Assign.To>
                                                                     <OutArgument x:TypeArguments="x:String">[newfile]</OutArgument>
                                                                   </Assign.To>
@@ -1297,20 +1297,20 @@
                                                                     <InArgument x:TypeArguments="x:String">[System.IO.Path.ChangeExtension(CurrentFile.FullName, ".xlsx")]</InArgument>
                                                                   </Assign.Value>
                                                                 </Assign>
-                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="507,179" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Error" Message="[&quot;new file:&quot; + newfile]" />
-                                                                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="507,535" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_5" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[newfile]">
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="507,176" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Error" Message="[&quot;new file:&quot; + newfile]" />
+                                                                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="507,526" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_5" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[newfile]">
                                                                   <ueab:ExcelApplicationCard.Body>
                                                                     <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                                                       <ActivityAction.Argument>
                                                                         <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                                                                       </ActivityAction.Argument>
-                                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="473,235" sap2010:WorkflowViewState.IdRef="Sequence_163">
+                                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="473,224" sap2010:WorkflowViewState.IdRef="Sequence_163">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,171" sap2010:WorkflowViewState.IdRef="FormatRangeX_4" Range="[Excel.Sheet(System.IO.Path.GetFileNameWithoutExtension(CurrentFile.ToString())).Range(&quot;K4:K1000&quot;)]">
+                                                                        <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,164" sap2010:WorkflowViewState.IdRef="FormatRangeX_4" Range="[Excel.Sheet(System.IO.Path.GetFileNameWithoutExtension(CurrentFile.ToString())).Range(&quot;K4:K1000&quot;)]">
                                                                           <ueab:FormatRangeX.Alignment>
                                                                             <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
                                                                           </ueab:FormatRangeX.Alignment>
@@ -1326,7 +1326,7 @@
                                                                   </ueab:ExcelApplicationCard.Body>
                                                                 </ueab:ExcelApplicationCard>
                                                               </Sequence>
-                                                              <uasa:AppendItemToList x:TypeArguments="x:String" ItemIndex="{x:Null}" sap2010:Annotation.AnnotationText="Add filename into UOBStatementList" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="569,193" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_10" ItemToAppend="[newfile]" List="[UOBStatementList]">
+                                                              <uasa:AppendItemToList x:TypeArguments="x:String" ItemIndex="{x:Null}" sap2010:Annotation.AnnotationText="Add filename into UOBStatementList" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="702,190" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_10" ItemToAppend="[newfile]" List="[UOBStatementList]">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1344,13 +1344,13 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <ui:IfElseIfV2.Then>
-                                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="603,257" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="736,250" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <uasa:AppendItemToList x:TypeArguments="x:String" ItemIndex="{x:Null}" sap2010:Annotation.AnnotationText="Add filename into VMStatementList" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="569,193" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_2" ItemToAppend="[CurrentFile.FullName.ToString()]" List="[VMStatementList]">
+                                                        <uasa:AppendItemToList x:TypeArguments="x:String" ItemIndex="{x:Null}" sap2010:Annotation.AnnotationText="Add filename into VMStatementList" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="702,190" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_2" ItemToAppend="[CurrentFile.FullName.ToString()]" List="[VMStatementList]">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1371,19 +1371,19 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:ForEachFileX>
-                                          <If Condition="[Not VMStatementList.Any()]" DisplayName="Check that there is at least one DBS excel file" sap:VirtualizedContainerService.HintSize="673,415" sap2010:WorkflowViewState.IdRef="If_17">
+                                          <If Condition="[Not VMStatementList.Any()]" DisplayName="Check that there is at least one DBS excel file" sap:VirtualizedContainerService.HintSize="806,404.5" sap2010:WorkflowViewState.IdRef="If_17">
                                             <If.Then>
-                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="Sequence_137">
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,174.5" sap2010:WorkflowViewState.IdRef="Sequence_137">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_4" Reason="No DBS excel files were found" />
+                                                <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="416,114.5" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_4" Reason="No DBS excel files were found" />
                                               </Sequence>
                                             </If.Then>
                                             <If.Else>
-                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_136">
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.5" sap2010:WorkflowViewState.IdRef="Sequence_136">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1393,19 +1393,19 @@
                                               </Sequence>
                                             </If.Else>
                                           </If>
-                                          <If Condition="[Not UOBStatementList.Any()]" DisplayName="Check that there is at least one UOB excel file" sap:VirtualizedContainerService.HintSize="673,406" sap2010:WorkflowViewState.IdRef="If_18">
+                                          <If Condition="[Not UOBStatementList.Any()]" DisplayName="Check that there is at least one UOB excel file" sap:VirtualizedContainerService.HintSize="806,395.5" sap2010:WorkflowViewState.IdRef="If_18">
                                             <If.Then>
-                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="Sequence_138">
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,174.5" sap2010:WorkflowViewState.IdRef="Sequence_138">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_5" Reason="No UOB excel files were found" />
+                                                <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="416,114.5" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_5" Reason="No UOB excel files were found" />
                                               </Sequence>
                                             </If.Then>
                                             <If.Else>
-                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_139">
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.5" sap2010:WorkflowViewState.IdRef="Sequence_139">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1425,7 +1425,7 @@
                                                 <av:PointCollection x:Key="ConnectorLocation">110,495 110,545</av:PointCollection>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Sequence sap2010:Annotation.AnnotationText="This is to get list of Transaction files that:&#xA;1) For NET, contains &quot;UOB&quot; in file name&#xA;2) For CC, contain &quot;DBS&quot; in file name" DisplayName="Get Transactions list Sequence" sap:VirtualizedContainerService.HintSize="849,8619" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                            <Sequence sap2010:Annotation.AnnotationText="This is to get list of Transaction files that:&#xA;1) For NET, contains &quot;UOB&quot; in file name&#xA;2) For CC, contain &quot;DBS&quot; in file name" DisplayName="Get Transactions list Sequence" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1646,7 +1646,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:ForEach>
-                                              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loops each VMTransaction file for converting from csv to xlsx&#xA;as VM Transactions are always in csv" DisplayName="For Each VMTransactionPathCSV" sap:VirtualizedContainerService.HintSize="678,1073" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[VMTransactionListCSV]">
+                                              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loops each VMTransaction file for converting from csv to xlsx&#xA;as VM Transactions are always in csv" DisplayName="For Each VMTransactionPathCSV" sap:VirtualizedContainerService.HintSize="815,1073" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[VMTransactionListCSV]">
                                                 <ui:ForEach.Body>
                                                   <ActivityAction x:TypeArguments="x:String">
                                                     <ActivityAction.Argument>
