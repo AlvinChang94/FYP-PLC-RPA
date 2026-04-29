@@ -133,7 +133,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="805,683" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="803,683" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="GetFileDate" />
       <Variable x:TypeArguments="x:Boolean" Name="IsFutureDate" />
@@ -163,7 +163,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="643,558.6566666666666" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="809,514.6566666666666" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="OutputExcel" />
         <Variable x:TypeArguments="x:String" Name="PreviousDateRange" />
@@ -1190,7 +1190,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Sequence sap2010:Annotation.AnnotationText="This is to get list of Statement files that:&#xA;1) For NET, contains &quot;UOB&quot; in file name&#xA;2) For CC, contain &quot;DBS&quot; in file name&#xA;" DisplayName="Get Statements list Sequence" sap:VirtualizedContainerService.HintSize="840,4208.5" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                        <Sequence sap2010:Annotation.AnnotationText="This is to get list of Statement files that:&#xA;1) For NET, contains &quot;UOB&quot; in file name&#xA;2) For CC, contain &quot;DBS&quot; in file name&#xA;" DisplayName="Get Statements list Sequence" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2513,6 +2513,8 @@
                                                                                       <InArgument x:TypeArguments="s:DateTime" x:Key="in_GetFileDate">[GetFileDate]</InArgument>
                                                                                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Config">[OutConfig]</InArgument>
                                                                                       <InArgument x:TypeArguments="x:String" x:Key="in_ReconciliationFileName">[ReconciliationFileName]</InArgument>
+                                                                                      <InArgument x:TypeArguments="x:String" x:Key="in_TargetFolderPath">[UpdateFilePath]</InArgument>
+                                                                                      <InArgument x:TypeArguments="sd:DataTable" x:Key="in_OutletNames">[OutletNames]</InArgument>
                                                                                     </ui:InvokeWorkflowFile.Arguments>
                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
