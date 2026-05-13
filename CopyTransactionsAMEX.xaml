@@ -133,7 +133,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TabulateReconciliationFile" sap:VirtualizedContainerService.HintSize="860.6666666666666,6859.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TabulateReconciliationFile" sap:VirtualizedContainerService.HintSize="683.3333333333333,7422" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="DateVar" />
       <Variable x:TypeArguments="x:Int32" Name="DaysToLoop" />
@@ -151,7 +151,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="604,6836.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence sap:VirtualizedContainerService.HintSize="604,7399.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="RowIdx" />
         <Variable x:TypeArguments="x:Int32" Name="i" />
@@ -220,13 +220,13 @@
         </If.Else>
       </If>
       <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_ReconciliationAMEX]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="570,120" sap2010:WorkflowViewState.IdRef="ReadRange_4" Range="G3" SheetName="UOB AMEX" WorkbookPath="[in_Config(&quot;Reconciliation Folder Path&quot;) + &quot;\&quot; + in_ReconciliationFileName]" />
-      <Sequence sap:VirtualizedContainerService.HintSize="570,1835.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_49">
+      <Sequence sap:VirtualizedContainerService.HintSize="570,2398" sap2010:WorkflowViewState.IdRef="Sequence_49">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_38">
+        <Assign sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_38">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Int32">[PrevDays]</OutArgument>
           </Assign.To>
@@ -234,7 +234,7 @@
             <InArgument x:TypeArguments="x:Int32">[5]</InArgument>
           </Assign.Value>
         </Assign>
-        <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_39">
+        <Assign sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_39">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Int32">[BlockSize]</OutArgument>
           </Assign.To>
@@ -242,7 +242,7 @@
             <InArgument x:TypeArguments="x:Int32">[DaysToLoop + PrevDays]</InArgument>
           </Assign.Value>
         </Assign>
-        <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_40">
+        <Assign sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_40">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Int32">[OutletCount]</OutArgument>
           </Assign.To>
@@ -250,13 +250,13 @@
             <InArgument x:TypeArguments="x:Int32">[CInt(Math.Ceiling(dt_ReconciliationAMEX.Rows.Count / CDbl(BlockSize)))]</InArgument>
           </Assign.Value>
         </Assign>
-        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ReconciliationAMEX]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,1213.3333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ReconciliationAMEX]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="524,1776" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
           <ui:ForEachRow.Body>
             <ActivityAction x:TypeArguments="sd:DataRow">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1038.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_52">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,1601.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_52">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="RowDay" />
                   <Variable x:TypeArguments="s:DateTime" Name="RowDate" />
@@ -267,7 +267,7 @@
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_53">
+                <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_53">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[RowDay]</OutArgument>
                   </Assign.To>
@@ -275,7 +275,7 @@
                     <InArgument x:TypeArguments="x:Int32">[DateTime.Parse(CurrentRow("Date").ToString).Day]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_54">
+                <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_54">
                   <Assign.To>
                     <OutArgument x:TypeArguments="s:DateTime">[RowDate]</OutArgument>
                   </Assign.To>
@@ -283,34 +283,74 @@
                     <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(CurrentRow("Date").ToString)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <If Condition="[RowDate.Month &lt;&gt; in_GetFileDate.Month OrElse RowDate.Year &lt;&gt; in_GetFileDate.Year]" sap:VirtualizedContainerService.HintSize="452,625.3333333333334" sap2010:WorkflowViewState.IdRef="If_15">
+                <If Condition="[Not String.IsNullOrWhiteSpace(CurrentRow(&quot;Date&quot;).ToString) AndAlso CDate(CurrentRow(&quot;Date&quot;).ToString).Date &lt; New DateTime(in_GetFileDate.Year, in_GetFileDate.Month, 1).Date]" sap:VirtualizedContainerService.HintSize="488,1188" sap2010:WorkflowViewState.IdRef="If_16">
                   <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,404" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,966.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_69">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_55">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Object">[CurrentRow("Gross Sales per Settlement report")]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Object">[0]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_56">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Object">[CurrentRow("Receipt per bank statement")]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Object">[0]</InArgument>
-                        </Assign.Value>
-                      </Assign>
+                      <If Condition="[String.IsNullOrWhiteSpace(CurrentRow(&quot;Gross Sales per Settlement report&quot;).ToString)]" DisplayName="If column I is empty, write 0 on it" sap:VirtualizedContainerService.HintSize="452,458" sap2010:WorkflowViewState.IdRef="If_17">
+                        <If.Then>
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_57">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Object">[CurrentRow("Gross Sales per Settlement report")]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Object">[0]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[String.IsNullOrWhiteSpace(CurrentRow(&quot;Receipt per bank statement&quot;).ToString)]" DisplayName="If column J is empty, write 0 on it" sap:VirtualizedContainerService.HintSize="452,448.6666666666667" sap2010:WorkflowViewState.IdRef="If_18">
+                        <If.Then>
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_58">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Object">[CurrentRow("Receipt per bank statement")]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Object">[0]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_70">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
