@@ -133,7 +133,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="683.3333333333333,682.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="801,683" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="GetFileDate" />
       <Variable x:TypeArguments="x:Boolean" Name="IsFutureDate" />
@@ -195,14 +195,14 @@
             <av:PointCollection x:Key="ConnectorLocation">345,160 385,160</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence sap2010:Annotation.AnnotationText="Read config excel file, then generate config dictionary" DisplayName="Config File Sequence" sap:VirtualizedContainerService.HintSize="512.6666666666666,1382" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap2010:Annotation.AnnotationText="Read config excel file, then generate config dictionary" DisplayName="Config File Sequence" sap:VirtualizedContainerService.HintSize="1146,3705.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assign RPA Configurations excel file to a variable&#xA;&#xA;Assign the sheet of the excel file to a variable" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.6666666666667,241.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+          <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assign RPA Configurations excel file to a variable&#xA;&#xA;Assign the sheet of the excel file to a variable" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1112,241.5" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -210,7 +210,7 @@
                     <OutArgument x:TypeArguments="x:String">[ConfigFile]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">C:\RPA\RPA - Petlovers\RPA Configuration\RPA Config.xlsx</InArgument>
+                    <InArgument x:TypeArguments="x:String">C:\Users\user\Documents\NYP Mods Y3S1\FYP\RPA - Petlovers\RPA Configuration\RPA Config.xlsx</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -231,7 +231,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
-          <Assign sap2010:Annotation.AnnotationText="Create a new dictionary and initialize it" sap:VirtualizedContainerService.HintSize="478.6666666666667,207.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign sap2010:Annotation.AnnotationText="Create a new dictionary and initialize it" sap:VirtualizedContainerService.HintSize="1112,207" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[OutConfig]</OutArgument>
             </Assign.To>
@@ -246,7 +246,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
-          <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Read from RPA Configurations excel file" DataTable="[ConfigDT]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="478.6666666666667,150.66666666666666" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[ConfigSheet]" WorkbookPath="[ConfigFile]">
+          <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Read from RPA Configurations excel file" DataTable="[ConfigDT]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="1112,151" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[ConfigSheet]" WorkbookPath="[ConfigFile]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -255,19 +255,19 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ReadRange>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loop through the contents of the data table" DataTable="[ConfigDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="478.6666666666667,511.3333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loop through the contents of the data table" DataTable="[ConfigDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1112,502" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,296.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,288" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap2010:Annotation.AnnotationText="Assigns the 'Value' from the current row to the 'OutConfig' dictionary using the 'Key' from the current row as the dictionary key" sap:VirtualizedContainerService.HintSize="416,232.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap2010:Annotation.AnnotationText="Assigns the 'Value' from the current row to the 'OutConfig' dictionary using the 'Key' from the current row as the dictionary key" sap:VirtualizedContainerService.HintSize="416,228" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[OutConfig(CurrentRow("Key").ToString)]</OutArgument>
                     </Assign.To>
@@ -291,7 +291,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEachRow>
-          <TryCatch sap2010:Annotation.AnnotationText="Check that RangeDayMode, StartDayValue and EndDayValue are valid values, and EndDayValue is greater or equal to StartDayValue." DisplayName="Check that the RangeDayValues are valid" sap:VirtualizedContainerService.HintSize="478.6666666666667,118.66666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch sap2010:Annotation.AnnotationText="Check that RangeDayMode, StartDayValue and EndDayValue are valid values, and EndDayValue is greater or equal to StartDayValue." DisplayName="Check that the RangeDayValues are valid" sap:VirtualizedContainerService.HintSize="1112,2097" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -364,7 +364,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1110,467" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                  <Sequence DisplayName="Catch - BusinessRuleException" sap:VirtualizedContainerService.HintSize="1110,467" sap2010:WorkflowViewState.IdRef="Sequence_94">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -381,7 +381,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:InvalidCastException" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1110,467" sap2010:WorkflowViewState.IdRef="Sequence_131">
+                  <Sequence DisplayName="Catch - InvalidCastException" sap:VirtualizedContainerService.HintSize="1110,467" sap2010:WorkflowViewState.IdRef="Sequence_131">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -404,7 +404,7 @@
               </Sequence>
             </TryCatch.Finally>
           </TryCatch>
-          <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Log the key-value pairs of the dictionary to make sure that everything is working correctly" DisplayName="For Each Pair in OutConfig Dictionary" sap:VirtualizedContainerService.HintSize="478.6666666666667,92.66666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[OutConfig]">
+          <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Log the key-value pairs of the dictionary to make sure that everything is working correctly" DisplayName="For Each Pair in OutConfig Dictionary" sap:VirtualizedContainerService.HintSize="1112,447" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[OutConfig]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                 <ActivityAction.Argument>
