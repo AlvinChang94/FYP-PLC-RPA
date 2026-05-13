@@ -131,13 +131,13 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="CopyTransactionsCash" sap:VirtualizedContainerService.HintSize="801,8509.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CopyTransactionsCash" sap:VirtualizedContainerService.HintSize="801,8998.000000000002" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="662,8486.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="662,8639.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_Cash" />
         <Variable x:TypeArguments="x:Int32" Name="DaysToLoop" />
@@ -493,13 +493,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="628,2820.5" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="[DaysToLoop]" StartAt="1">
+      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="628,2848.5" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="[DaysToLoop]" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentDay" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="594,2620" sap2010:WorkflowViewState.IdRef="Sequence_35">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="594,2648" sap2010:WorkflowViewState.IdRef="Sequence_35">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dt_POSTable" />
               </Sequence.Variables>
@@ -543,13 +543,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ReadRange>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_POSTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,2102" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_POSTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,2130" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,1928" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,1956" sap2010:WorkflowViewState.IdRef="Sequence_36">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd:DataTable" Name="dt_CurrentStore" />
                       </Sequence.Variables>
@@ -611,7 +611,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:FilterDataTable>
-                      <If Condition="[dt_CurrentStore.RowCount &gt; 0]" DisplayName="If" sap:VirtualizedContainerService.HintSize="524,1334" sap2010:WorkflowViewState.IdRef="If_9">
+                      <If Condition="[dt_CurrentStore.RowCount &gt; 0]" DisplayName="If" sap:VirtualizedContainerService.HintSize="524,1362" sap2010:WorkflowViewState.IdRef="If_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -619,7 +619,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,1113" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,1141" sap2010:WorkflowViewState.IdRef="Sequence_38">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="OutletCode" />
                             </Sequence.Variables>
@@ -655,41 +655,42 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <If Condition="[MatchIndex &gt;= 0]" sap:VirtualizedContainerService.HintSize="488,701" sap2010:WorkflowViewState.IdRef="If_10">
+                            <If Condition="[MatchIndex &gt;= 0]" sap:VirtualizedContainerService.HintSize="488,729" sap2010:WorkflowViewState.IdRef="If_10">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,480" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,508" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[String.IsNullOrWhiteSpace(dt_Cash.Rows(MatchIndex)(2).ToString)]" sap:VirtualizedContainerService.HintSize="452,420" sap2010:WorkflowViewState.IdRef="If_14">
+                                  <If Condition="[String.IsNullOrWhiteSpace(dt_Cash.Rows(MatchIndex)(2).ToString) OrElse dt_Cash.Rows(MatchIndex)(2).ToString.Trim = &quot;0&quot; OrElse dt_Cash.Rows(MatchIndex)(2).ToString.Trim = &quot;0.0&quot;]" sap:VirtualizedContainerService.HintSize="452,448" sap2010:WorkflowViewState.IdRef="If_14">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <If.Then>
-                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,199" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,227" sap2010:WorkflowViewState.IdRef="Sequence_54">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;H&quot; + (MatchIndex + 4).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="CASH" Text="[If(String.IsNullOrWhiteSpace(CurrentRow(&quot;CASH&quot;).ToString) OrElse CurrentRow(&quot;CASH&quot;).ToString.Trim() = &quot;-&quot;, &quot;&quot;, CurrentRow(&quot;CASH&quot;).ToString)]" WorkbookPath="[in_Config(&quot;Reconciliation Folder Path&quot;) + &quot;\&quot; + in_ReconciliationFileName]">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </ui:WriteCell>
+                                        <Assign sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="Assign_80">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Object">[dt_Cash.Rows(MatchIndex)(2)]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Object">[If(String.IsNullOrWhiteSpace(CurrentRow("CASH").ToString) OrElse CurrentRow("CASH").ToString.Trim() = "-", "", CurrentRow("CASH").ToString)]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
                                       </Sequence>
                                     </If.Then>
                                     <If.Else>
@@ -746,6 +747,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:RepeatNumberOfTimesX>
+      <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_Cash.DefaultView.ToTable(False, dt_Cash.Columns(2).ColumnName)]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="628,148" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="CASH" StartingCell="H4" WorkbookPath="[in_Config(&quot;Reconciliation Folder Path&quot;) + &quot;\&quot; + in_ReconciliationFileName]" />
       <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="628,845" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
