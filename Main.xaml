@@ -195,7 +195,7 @@
             <av:PointCollection x:Key="ConnectorLocation">345,160 385,160</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence sap2010:Annotation.AnnotationText="Read config excel file, then generate config dictionary" DisplayName="Config File Sequence" sap:VirtualizedContainerService.HintSize="1146,3705.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap2010:Annotation.AnnotationText="Read config excel file, then generate config dictionary" DisplayName="Config File Sequence" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2572,7 +2572,7 @@
                                                                                         <av:PointCollection x:Key="ConnectorLocation">635,840 735,840</av:PointCollection>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Show a message that job is completed" AutoCloseAfter="00:00:00" DisplayName="Message Box: Success" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Automation Completed&quot;]">
+                                                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Show a message that job is completed" AutoCloseAfter="00:01:00" DisplayName="Message Box: Success" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Automation Completed&quot;]">
                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
